@@ -7,12 +7,12 @@ export default class PrintMe {
         description: 'Setup webpack',
       },
       {
-        id: 1,
+        id: 2,
         completed: false,
         description: 'Set up webpack dev-server',
       },
       {
-        id: 1,
+        id: 3,
         completed: false,
         description: 'Work on project',
       },
