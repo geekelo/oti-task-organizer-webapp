@@ -1,4 +1,4 @@
 import PrintMe from './print.js';
 import './style.css';
 
-export default loadTasks = new PrintMe();
+export const loadTasks = new PrintMe();
