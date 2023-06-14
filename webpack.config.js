@@ -8,29 +8,29 @@ module.exports = {
     print: './src/print.js',
   },
   devtool: 'inline-source-map',
- devServer: {
-   static: './dist',
- },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Output Management',
-      template: './src/index.html',
-    }),
-  ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-   clean: true,
+  devServer: {
+    static: './dist',
   },
-  module: {
-   rules: [
-     {
-       test: /\.css$/i,
-       use: ['style-loader', 'css-loader'],
-     },
+   plugins: [
+     new HtmlWebpackPlugin({
+       title: 'Output Management',
+       template: './src/index.html',
+     }),
    ],
- },
- optimization: {
-   runtimeChunk: 'single',
- },
+   output: {
+     filename: '[name].bundle.js',
+     path: path.resolve(__dirname, 'dist'),
+    clean: true,
+   },
+   module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+  optimization: {
+    runtimeChunk: 'single',
+  },
 };
