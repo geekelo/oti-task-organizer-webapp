@@ -1,7 +1,53 @@
-body {
-    background-color: bisque;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.hello {
-    color: red;
-  }
+body {
+    background-color: #ece9f0;
+    font-family: 'Montserrat', sans-serif;
+    color: #535353;
+}
+
+.listSection {
+  width: 50%;
+  margin: 10% auto 20% auto;
+  list-style: none;
+  display: flex;
+  gap: 0.15rem;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.listContainers {
+  list-style: none;
+  display: flex;
+  gap: 0.15rem;
+  flex-direction: column;
+}
+
+.listsbgcolor {
+  background-color: #fff;
+  padding: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"],
+input[type="text"]:active {
+  border: none;
+  outline: none;
+  font-style: italic;
+}
+
+#clearContainer {
+  background-color: #c7bfd6;
+  justify-content: center;
+}
+
+.material-icons {
+  color:  #c7bfd6;
+}
