@@ -1,8 +1,5 @@
 const path = require('path');
- const HtmlWebpackPlugin = require('html-webpack-plugin');
- const toml = require('toml');
-const yaml = require('yamljs');
-const json5 = require('json5');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
  module.exports = {
    mode: 'development',
