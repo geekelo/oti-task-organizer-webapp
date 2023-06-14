@@ -60,17 +60,9 @@ After you're finished please remove all the comments and instructions.
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Webpack-demo Template <a name="about-project"></a>
+# 📖 Oti Task Organizer WebApp<a name="about-project"></a>
 
-**The Awesome Books WebApp** is a user-friendly platform designed to help users keep track of their personal book collection. The website allows users to add and delete books from their record, making it convenient to manage their reading materials.
-
-Users can easily add books to their collection by providing the book's title and author information. The website stores this data and displays it in an organized manner, making it easy for users to browse through their book records. Each book entry includes details such as the title and author, providing users with a comprehensive overview of their collection.
-
-In addition to adding books, users can also remove books from their record when they no longer wish to track them. The website offers a simple deletion process, ensuring that users can effortlessly manage their collection over time.
-
-The Awesome Books WebApp prioritizes user experience and provides a clean and intuitive interface. It offers a seamless process for adding and deleting books, empowering users to maintain an up-to-date and personalized record of their reading materials.
-
-With the Awesome Books WebApp, users can effortlessly organize and track their book collection, ensuring they never lose sight of their favorite reads and enabling them to stay engaged with their literary adventures.
+**Oti Task Organizer** is a To-Do List Web App that helps users simplify task management. With its user-friendly web application you can create, organize, and manage your to-do list effortlessly, stay productive and focused on your goals by easily adding, editing, and marking tasks as complete. With its intuitive interface and convenient features, staying organized has never been easier. Experience a streamlined to-do list management solution designed to boost your productivity and keep you on track.
 
 Head to the <a href="#live-demo">LIVE DEMO SECTION</a> for Live links and presentations
 
@@ -126,7 +118,7 @@ Head to the <a href="#live-demo">LIVE DEMO SECTION</a> for Live links and presen
 
 > View the live demo of this project by clicking the text below.
 
-- [See Live Demo](https://geekelo.github.io/awesome-books-webapp/)
+- [See Live Demo](https://geekelo.github.io/oti-task-organizer-webapp/dist/index.html)
 <!-- - [First Presenation Video](https://www.loom.com/share/719c333faa524c5db6930878f33b809b) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -233,6 +225,6 @@ You can offer Contributions, submit an [issue](../../issues/), and make a featur
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
