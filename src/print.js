@@ -27,16 +27,15 @@ export default class PrintMe {
     this.removeBtn.forEach((each, index) => {
       if (each === e.target) {
         this.addedTasks = this.addedTasks.filter((task, taskIndex) => taskIndex !== index);
-        };
-
-        // update Task IDs
-        let newId = 0;
-        this.addedTasks.forEach((eachItem) => {
-          newId += 1;
-          eachItem.id = newId;
-        });
-        localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
-        this.displayTasks();
+      }
+      // update Task IDs
+      let newId = 0;
+      this.addedTasks.forEach((eachItem) => {
+        newId += 1;
+        eachItem.id = newId;
+      });
+      localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
+      this.displayTasks();
       });
   }
 
