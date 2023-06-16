@@ -1,20 +1,20 @@
-import TaskList from "./tasksList.js";
-import ShowDeleteBtn from "./showDeletebtn.js";
+import TaskList from './tasksList.js';
+import ShowDeleteBtn from './showDeletebtn.js';
 
 export default class PrintMe {
   constructor() {
     this.addedTasks = [];
-    this.listContainer = document.querySelector(".listContainers");
-    this.form = document.querySelector(".form");
-    this.textField = document.querySelector(".addlist");
+    this.listContainer = document.querySelector('.listContainers');
+    this.form = document.querySelector('.form');
+    this.textField = document.querySelector('.addlist');
     this.checkStorage();
     this.setupListener();
     this.updateTaskDescription();
   }
 
   createTasks(task) {
-    const list = document.createElement("div");
-    list.className = "listItems listsbgcolor";
+    const list = document.createElement('div');
+    list.className = 'listItems listsbgcolor';
     list.innerHTML = `<input type="text" class="taskDescriptions" value = ${task.description}> <span class="material-icons moreIcon">more_vert</span> <span class="material-icons deleteBtn">delete_outline</span>`;
     this.listContainer.appendChild(list);
   }
@@ -22,7 +22,7 @@ export default class PrintMe {
   removeBtnListener(e) {
     const stored = JSON.parse(localStorage.getItem("storedTasks"));
     this.addedTasks = stored.map(
-      (item) => new TaskList(item.id, item.completed, item.description)
+      (item) => new TaskList(item.id, item.completed, item.description),
     );
     this.removeBtn.forEach((each, index) => {
       if (each === e.target) {
@@ -35,44 +35,42 @@ export default class PrintMe {
         // update Task IDs
         let newId = 0;
         this.addedTasks.forEach((eachItem) => {
-          eachItem.id = ++newId;
+          newId = newId + 1;
+          eachItem.id = newId;
         });
-        localStorage.setItem("storedTasks", JSON.stringify(this.addedTasks));
+        localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
         this.displayTasks();
       }
     });
   }
 
   updateTaskDescription() {
-    this.taskDescriptions.forEach((eachInput) =>
-      eachInput.addEventListener("change", (e) => {
-        const stored = JSON.parse(localStorage.getItem("storedTasks"));
+    this.taskDescriptions.forEach((eachInput) => eachInput.addEventListener('change', (e) => {
+        const stored = JSON.parse(localStorage.getItem('storedTasks'));
         this.addedTasks = stored.map(
-          (item) => new TaskList(item.id, item.completed, item.description)
+          (item) => new TaskList(item.id, item.completed, item.description),
         );
         this.taskDescriptions.forEach((each, index) => {
           if (each === e.target) {
-            this.addedTasks[index].description =
-              this.taskDescriptions[index].value;
+            this.addedTasks[index].description = this.taskDescriptions[index].value;
           }
-        });
-        localStorage.setItem("storedTasks", JSON.stringify(this.addedTasks));
+        },);
+        localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
       })
-    );
-  }
+    )}
 
   displayTasks() {
-    this.listContainer.innerHTML = "";
+    this.listContainer.innerHTML = '';
     this.addedTasks.forEach((task) => this.createTasks(task));
-    this.removeBtn = document.querySelectorAll(".deleteBtn");
+    this.removeBtn = document.querySelectorAll('.deleteBtn');
     this.hide3dots = new ShowDeleteBtn();
     this.hide3dots.setupListner();
     this.removeBtn.forEach((each) =>
-      each.addEventListener("click", (e) => {
+      each.addEventListener('click', (e) => {
         this.removeBtnListener(e);
       })
     );
-    this.taskDescriptions = document.querySelectorAll(".taskDescriptions");
+    this.taskDescriptions = document.querySelectorAll('.taskDescriptions');
     this.updateTaskDescription();
   }
 
@@ -80,7 +78,7 @@ export default class PrintMe {
     const stored = JSON.parse(localStorage.getItem("storedTasks"));
     if (stored) {
       this.addedTasks = stored.map(
-        (task) => new TaskList(task.id, task.completed, task.description)
+        (task) => new TaskList(task.id, task.completed, task.description),
       );
       this.displayTasks();
     }
