@@ -1,13 +1,12 @@
-import TaskList from "./tasksList.js";
-import ShowDeleteBtn from "./showDeletebtn.js";
-
+import TaskList from './tasksList.js';
+import ShowDeleteBtn from './showDeletebtn.js';
 
 export default class PrintMe {
   constructor() {
     this.addedTasks = [];
     this.listContainer = document.querySelector('.listContainers');
-    this.form = document.querySelector(".form");
-    this.textField = document.querySelector(".addlist");
+    this.form = document.querySelector('.form');
+    this.textField = document.querySelector('.addlist');
     this.checkStorage();
     this.setupListener();
     this.updateTaskDescription();
@@ -63,7 +62,7 @@ export default class PrintMe {
     this.removeBtn.forEach((each) => each.addEventListener('click', (e) => { 
       this.removeBtnListener(e);
      }));
-     this.taskDescriptions = document.querySelectorAll(".taskDescriptions");
+     this.taskDescriptions = document.querySelectorAll('.taskDescriptions');
      this.updateTaskDescription();
   }
 
