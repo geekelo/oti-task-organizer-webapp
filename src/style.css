@@ -28,6 +28,12 @@ body {
   flex-direction: column;
 }
 
+.taskDescriptions {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00000093;
+}
+
 .listsbgcolor {
   background-color: #fff;
   padding: 2rem;
@@ -46,7 +52,7 @@ li[contenteditable="true"]:active,
 li[contenteditable="true"]:focus {
   border: none;
   outline: none;
-  background-color: transparent;
+  background-color: inherit;
 }
 
 #clearContainer {
