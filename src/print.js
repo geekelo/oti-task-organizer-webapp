@@ -26,7 +26,7 @@ export default class PrintMe {
     );
     this.removeBtn.forEach((each, index) => {
       if (each === e.target) {
-        this.addedTasks = this.addedTasks.filter((task, taskIndex) => {
+        this.addedTasks = this.addedTasks.filter(function(task, taskIndex) {
           if (taskIndex !== index) {
             return task;
           }
