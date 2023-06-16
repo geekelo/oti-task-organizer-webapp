@@ -56,7 +56,7 @@ export default class PrintMe {
         }
       });
       localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
-    }),)
+    }));
   }
 
   displayTasks() {
@@ -66,8 +66,8 @@ export default class PrintMe {
     this.hide3dots = new ShowDeleteBtn();
     this.hide3dots.setupListner();
     this.removeBtn.forEach((each) => each.addEventListener('click', (e) => {
-        this.removeBtnListener(e);
-      }),);
+      this.removeBtnListener(e);
+    }));
     this.taskDescriptions = document.querySelectorAll('.taskDescriptions');
     this.updateTaskDescription();
   }
