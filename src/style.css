@@ -36,11 +36,17 @@ body {
   justify-content: space-between;
 }
 
+.addlist {
+  font-style: italic;
+}
+
 input[type="text"],
-input[type="text"]:active {
+input[type="text"]:active,
+li[contenteditable="true"]:active,
+li[contenteditable="true"]:focus {
   border: none;
   outline: none;
-  font-style: italic;
+  background-color: transparent;
 }
 
 #clearContainer {
@@ -50,4 +56,8 @@ input[type="text"]:active {
 
 .material-icons {
   color: #c7bfd6;
+}
+
+.deleteBtn {
+  display: none;
 }

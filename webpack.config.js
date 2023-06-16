@@ -6,6 +6,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     print: './src/print.js',
+    showdeletebtn: './src/showDeletebtn.js',
+    taskslist: './src/tasksList.js'
   },
   devtool: 'inline-source-map',
   devServer: {
