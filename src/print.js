@@ -37,7 +37,7 @@ export default class PrintMe {
         });
         localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
         this.displayTasks();
-      },);
+      });
   }
 
   updateTaskDescription() {
