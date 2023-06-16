@@ -20,7 +20,7 @@ export default class PrintMe {
   }
 
   removeBtnListener(e) {
-    const stored = JSON.parse(localStorage.getItem("storedTasks"));
+    const stored = JSON.parse(localStorage.getItem('storedTasks'));
     this.addedTasks = stored.map(
       (item) => new TaskList(item.id, item.completed, item.description),
     );
@@ -35,7 +35,7 @@ export default class PrintMe {
         // update Task IDs
         let newId = 0;
         this.addedTasks.forEach((eachItem) => {
-          newId = newId + 1;
+          newId += 1;
           eachItem.id = newId;
         });
         localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
@@ -46,18 +46,18 @@ export default class PrintMe {
 
   updateTaskDescription() {
     this.taskDescriptions.forEach((eachInput) => eachInput.addEventListener('change', (e) => {
-        const stored = JSON.parse(localStorage.getItem('storedTasks'));
-        this.addedTasks = stored.map(
-          (item) => new TaskList(item.id, item.completed, item.description),
-        );
-        this.taskDescriptions.forEach((each, index) => {
-          if (each === e.target) {
-            this.addedTasks[index].description = this.taskDescriptions[index].value;
-          }
-        },);
-        localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
-      })
-    )}
+      const stored = JSON.parse(localStorage.getItem('storedTasks'));
+      this.addedTasks = stored.map(
+        (item) => new TaskList(item.id, item.completed, item.description),
+      );
+      this.taskDescriptions.forEach((each, index) => {
+        if (each === e.target) {
+          this.addedTasks[index].description = this.taskDescriptions[index].value;
+        }
+      });
+      localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
+    })
+  )}
 
   displayTasks() {
     this.listContainer.innerHTML = '';
@@ -75,7 +75,7 @@ export default class PrintMe {
   }
 
   checkStorage() {
-    const stored = JSON.parse(localStorage.getItem("storedTasks"));
+    const stored = JSON.parse(localStorage.getItem('storedTasks'));
     if (stored) {
       this.addedTasks = stored.map(
         (task) => new TaskList(task.id, task.completed, task.description),
@@ -87,19 +87,19 @@ export default class PrintMe {
   setStorage(id, completed, description) {
     const newTask = new TaskList(id, completed, description);
     this.addedTasks.push(newTask);
-    localStorage.setItem("storedTasks", JSON.stringify(this.addedTasks));
+    localStorage.setItem('storedTasks', JSON.stringify(this.addedTasks));
     this.displayTasks();
   }
 
   setupListener() {
-    this.form.addEventListener("submit", (e) => {
+    this.form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (this.textField.value) {
         const description = this.textField.value;
         const id = this.addedTasks.length + 1;
         const completed = false;
         this.setStorage(id, completed, description);
-        this.textField.value = "";
+        this.textField.value = '';
       }
     });
   }
