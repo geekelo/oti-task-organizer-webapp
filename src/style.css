@@ -28,6 +28,12 @@ body {
   flex-direction: column;
 }
 
+.taskDescriptions {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00000093;
+}
+
 .listsbgcolor {
   background-color: #fff;
   padding: 2rem;
@@ -36,11 +42,17 @@ body {
   justify-content: space-between;
 }
 
+.addlist {
+  font-style: italic;
+}
+
 input[type="text"],
-input[type="text"]:active {
+input[type="text"]:active,
+li[contenteditable="true"]:active,
+li[contenteditable="true"]:focus {
   border: none;
   outline: none;
-  font-style: italic;
+  background-color: inherit;
 }
 
 #clearContainer {
@@ -50,4 +62,8 @@ input[type="text"]:active {
 
 .material-icons {
   color: #c7bfd6;
+}
+
+.deleteBtn {
+  display: none;
 }
