@@ -25,6 +25,6 @@ export default class ClearCompleted {
       localStorage.setItem('storedTasks', JSON.stringify(this.taskList));
       this.taskDisplay = new PrintMe();
       this.taskDisplay.displayTasks();
-    }); 
+    });
   }
 }
