@@ -8,6 +8,8 @@ module.exports = {
     print: './src/print.js',
     showdeletebtn: './src/showDeletebtn.js',
     taskslist: './src/tasksList.js',
+    checkboxControl: './src/checkbox.js',
+    clearCompleted: './src/clearCompleted.js',
   },
   devtool: 'inline-source-map',
   devServer: {

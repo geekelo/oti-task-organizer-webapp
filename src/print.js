@@ -1,5 +1,6 @@
 import TaskList from './tasksList.js';
 import ShowDeleteBtn from './showDeletebtn.js';
+import CheckboxControl from './checkbox.js';
 
 export default class PrintMe {
   constructor() {
@@ -15,7 +16,9 @@ export default class PrintMe {
   createTasks(task) {
     const list = document.createElement('div');
     list.className = 'listItems listsbgcolor';
-    list.innerHTML = `<input type="text" class="taskDescriptions" value = ${task.description}> <span class="material-icons moreIcon">more_vert</span> <span class="material-icons deleteBtn">delete_outline</span>`;
+    list.innerHTML = `<label><input type="checkbox" class="checkbox"><input type="text" class="taskDescriptions" value = ${task.description}></label>
+    <span class="material-icons moreIcon">more_vert</span>
+    <span class="material-icons deleteBtn">delete_outline</span>`;
     this.listContainer.appendChild(list);
   }
 
@@ -64,6 +67,9 @@ export default class PrintMe {
       this.removeBtnListener(e);
     }));
     this.taskDescriptions = document.querySelectorAll('.taskDescriptions');
+    this.checkboxes = document.querySelectorAll('.checkbox');
+    this.ifCompleted = new CheckboxControl();
+    this.ifCompleted.completed();
     this.updateTaskDescription();
   }
 
