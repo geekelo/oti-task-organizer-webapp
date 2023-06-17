@@ -1,5 +1,5 @@
-import TaskList from "./tasksList.js";
-import PrintMe from "./print.js";
+import TaskList from './tasksList.js';
+import PrintMe from './print.js';
 
 export default class ClearCompleted {
   constructor() {
@@ -25,7 +25,6 @@ export default class ClearCompleted {
       localStorage.setItem('storedTasks', JSON.stringify(this.taskList));
       this.taskDisplay = new PrintMe();
       this.taskDisplay.displayTasks();
-    });
-      
+    }); 
   }
 }

@@ -99,7 +99,6 @@ input[type="checkbox"]:checked::before {
   font-size: 2rem;
 }
 
-
 #clearContainer {
   background-color: #c7bfd6;
   justify-content: center;
@@ -113,5 +112,5 @@ input[type="checkbox"]:checked::before {
 
 .deleteBtn {
   display: none;
-  color:  #67558f;
+  color: #67558f;
 }
