@@ -13,7 +13,7 @@ export default class CheckboxControl {
       if (e.target.checked) {
         this.taskDescriptions[index].style.textDecoration = 'line-through';
         const stored = JSON.parse(localStorage.getItem('storedTasks'));
-        this.taskList = stored.map((task) => new TaskList(task.id, task.completed, task.description)
+        this.taskList = stored.map((task) => new TaskList(task.id, task.completed, task.description),
         );
         this.taskList[index].completed = true;
         localStorage.setItem('storedTasks', JSON.stringify(this.taskList));
@@ -21,9 +21,8 @@ export default class CheckboxControl {
       else {
         this.taskDescriptions[index].style.textDecoration = 'none';
         const stored = JSON.parse(localStorage.getItem('storedTasks'));
-        this.taskList = stored.map((task) => {
-          new TaskList(task.id, task.completed, task.description)
-        });
+        this.taskList = stored.map((task) => new TaskList(task.id, task.completed, task.description),
+        );
         this.taskList[index].completed = false;
         localStorage.setItem('storedTasks', JSON.stringify(this.taskList));
       }
