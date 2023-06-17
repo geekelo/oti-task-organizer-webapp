@@ -11,6 +11,10 @@ body {
   color: #535353;
 }
 
+.material-icons {
+  color: #c7bfd6;
+}
+
 .listSection {
   width: 50%;
   margin: 10% auto 20% auto;
@@ -32,6 +36,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   color: #00000093;
+  padding-left: 1rem;
 }
 
 .listsbgcolor {
@@ -40,6 +45,10 @@ body {
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+}
+
+input[type="text"] {
+  width: 40vw;
 }
 
 .addlist {
@@ -55,15 +64,54 @@ li[contenteditable="true"]:focus {
   background-color: inherit;
 }
 
+label {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #c7bfd6;
+  border-radius: 25%;
+}
+
+input[type="checkbox"]:checked {
+  border: none;
+}
+
+/* Show custom checkmark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+  content: "\2713"; /* Unicode checkmark symbol */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 18px;
+  background-color: inherit;
+  color: #67558f;
+  font-size: 2rem;
+}
+
+
 #clearContainer {
   background-color: #c7bfd6;
   justify-content: center;
+  text-decoration: none;
+  color: inherit;
 }
 
-.material-icons {
-  color: #c7bfd6;
+#clearContainer:hover {
+  text-decoration: underline;
 }
 
 .deleteBtn {
   display: none;
+  color:  #67558f;
 }
