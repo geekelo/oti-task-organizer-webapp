@@ -60,6 +60,8 @@ After you're finished please remove all the comments and instructions.
 
 <!-- PROJECT DESCRIPTION -->
 
+<img src="https://geekelo.us.to/wp-content/uploads/2023/08/Screenshot-2023-08-07-112052.png">
+
 # 📖 Oti Task Organizer WebApp<a name="about-project"></a>
 
 **Oti Task Organizer** is a To-Do List Web App that helps users simplify task management. With its user-friendly web application you can create, organize, and manage your to-do list effortlessly, stay productive and focused on your goals by easily adding, editing, and marking tasks as complete. With its intuitive interface and convenient features, staying organized has never been easier. Experience a streamlined to-do list management solution designed to boost your productivity and keep you on track.
