@@ -132,7 +132,7 @@ To get a local copy up and running, follow these steps.
 
 > Clone the repository
 ```
-git clone https://github.com/geekelo/awesome-books-webapp.git
+git clone https://github.com/geekelo/oti-task-organizer-webapp.git
 ```
 > And you are ready to begin your project
 
