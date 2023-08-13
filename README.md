@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions.
 
 <!-- PROJECT DESCRIPTION -->
 
-<img src="https://geekelo.us.to/wp-content/uploads/2023/08/Screenshot-2023-08-07-112052.png">
+<img src="https://geekelo.com.ng/wp-content/uploads/2023/08/Screenshot-2023-08-07-112052.png">
 
 # 📖 Oti Task Organizer WebApp<a name="about-project"></a>
 
